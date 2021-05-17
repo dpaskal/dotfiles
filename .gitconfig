@@ -1,6 +1,6 @@
 [user]
-	email = dpaskalev@gmail.com
-	name = Daniel Paskalev
+    email = dpaskalev@gmail.com
+    name = Daniel Paskalev
     username = dpaskal
 [core]
     editor = vim

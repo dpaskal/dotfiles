@@ -35,7 +35,13 @@ create_ps1() {
     local Y="\[$(tput setaf 3)\]"
     local B="\[$(tput setaf 27)\]"
     local E="\[$(tput sgr0)\]"
-    export PS1="$G\u@\h$E:$B\w$E \$ "
+    # git prompt function
+    git_prompt() {
+        if BR=$(git symbolic-ref --short HEAD 2>/dev/null); then
+            printf "$Y[$BR]$E"
+        fi
+    }
+    export PS1="$G\u@\h$E:$B\w$E$(git_prompt)\$ "
 }
 PROMPT_DIRTRIM=5
 create_ps1
