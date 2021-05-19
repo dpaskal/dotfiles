@@ -1,9 +1,4 @@
 [ -s ~/.bash_aliases ] && source ~/.bash_aliases
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
 
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
@@ -44,4 +39,4 @@ create_ps1() {
     export PS1="$G\u@\h$E:$B\w$E$(git_prompt)\$ "
 }
 PROMPT_DIRTRIM=5
-create_ps1
+PROMPT_COMMAND=create_ps1
