@@ -1,7 +1,5 @@
 [user]
-    email = dpaskalev@gmail.com
-    name = Daniel Paskalev
-    username = dpaskal
+    name = Dan
 [core]
     editor = vim
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
